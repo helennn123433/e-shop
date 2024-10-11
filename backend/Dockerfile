@@ -3,9 +3,12 @@ FROM openjdk:8-jre-alpine
 
 # Устанавливаем рабочую директорию
 WORKDIR /app
+RUN mvn clean install
+RUN mvn clean package
+RUN  cp target/E-Shop-0.0.1-SNAPSHOT.jar app.jar
 
 # Копируем файл jar
-COPY target/E-Shop-0.0.1-SNAPSHOT.jar app.jar
+#COPY target/E-Shop-0.0.1-SNAPSHOT.jar app.jar
 
 # Определяем переменные среды
 ENV SPRING_PROFILES_ACTIVE=docker
