@@ -8,11 +8,11 @@ WORKDIR /app
 COPY pom.xml .
 COPY src ./src
 
-# Выполняем команду Maven для сборки проекта (зависимости и сборка)
+# Выполняем команду Maven для сборки проекта (собираем JAR)
 RUN mvn clean package
 
-# После успешной сборки копируем JAR-файл
-COPY target/E-Shop-0.0.1-SNAPSHOT.jar app.jar
+# После успешной сборки копируем сгенерированный JAR-файл
+RUN cp target/E-Shop-0.0.1-SNAPSHOT.jar app.jar
 
 # Определяем переменные среды
 ENV SPRING_PROFILES_ACTIVE=docker
