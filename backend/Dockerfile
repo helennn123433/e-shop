@@ -1,18 +1,21 @@
-# Используем более легкий базовый образ с Maven и Java 8
-FROM maven:3.6.3-jdk-8
+# Используем более легкий базовый образ с Java и Maven wrapper
+FROM maven:3.6.3-jdk-8 AS build
 
 # Устанавливаем рабочую директорию
 WORKDIR /app
 
-# Копируем pom.xml и все файлы проекта для сборки
-COPY pom.xml .
-COPY src ./src
+# Копируем файлы Maven wrapper и проект
+COPY . .
 
 # Выполняем команду Maven для сборки проекта (собираем JAR)
 RUN mvn clean package
 
-# После успешной сборки копируем сгенерированный JAR-файл
-RUN cp target/E-Shop-0.0.1-SNAPSHOT.jar app.jar
+
+# Сборка образа для запуска
+FROM openjdk:8-jdk-alpine
+
+# Копируем сгенерированный JAR-файл
+COPY --from=build /app/target/E-Shop-0.0.1-SNAPSHOT.jar app.jar
 
 # Определяем переменные среды
 ENV SPRING_PROFILES_ACTIVE=docker
