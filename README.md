@@ -1,24 +1,22 @@
-# dock
+# e-shop
 
 ## Project setup
-```
-npm install
-```
+следуеем инструкциям чтобы установить и запустить проект
 
 ### Compiles and hot-reloads for development
+Сначала клонируем репозиторий
 ```
-npm run serve
+git clone
 ```
+После клонирования переход в репозиторий, который был склонирован
+```
+cd name_repository
+```
+Переход в другую ветку, где лежит проект
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Lints and fixes files
+Запуск проекта с использованием Docker
 ```
-npm run lint
+docker-compose up --build
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Теперь есть возможность получить приложение по адресу http://localhost:8081 (или по другому порту, указанный в файле docker-compose.yml)
