@@ -26,22 +26,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Lazy
     @Autowired
     private UserService userService;
+
+    @Autowired
     private JwtRequestFilter jwtRequestFilter;
 
-    @Autowired
-    public SecurityConfig(@Lazy JwtRequestFilter jwtRequestFilter) {
-        this.jwtRequestFilter = jwtRequestFilter;
-    }
-
-    @Autowired
-    public void setUserService(UserService userService) {
-        this.userService = userService;
-    }
-
-    @Autowired
-    public void setJwtRequestFilter(JwtRequestFilter jwtRequestFilter) {
-        this.jwtRequestFilter = jwtRequestFilter;
-    }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {

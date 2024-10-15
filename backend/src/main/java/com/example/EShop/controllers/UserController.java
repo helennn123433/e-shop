@@ -5,6 +5,9 @@ import com.example.EShop.dtos.UserDto;
 
 import com.example.EShop.repositories.UserRepository;
 import com.example.EShop.services.AuthService;
+import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -18,13 +21,20 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/user")
 @RequiredArgsConstructor
 public class UserController {
-    private final UserService userService;
-    private final AuthService authService;
+
     private final UserRepository userRepository;
+
+    @Lazy
+    @Autowired
+    private UserService userService;
+
+    @Lazy
+    @Autowired
+    private AuthService authService;
 
 
     @PostMapping("/login")
-    public ResponseEntity<?> auth(@RequestParam(name = "email") String email ,@RequestParam(name = "password") String password) {
+    public ResponseEntity<?> auth(@RequestParam(name = "email") String email, @RequestParam(name = "password") String password) {
 
         try {
             String token = authService.createAuthToken(email, password);

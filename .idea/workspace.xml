@@ -7,7 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fff2a4bc-7179-4154-aa8d-5ae86513b345" name="Changes" comment="DOCKER2" />
+    <list default="true" id="fff2a4bc-7179-4154-aa8d-5ae86513b345" name="Changes" comment="DOCKER2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,16 +31,28 @@
         <entry key="$PROJECT_DIR$" value="forLastChanges" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/backend" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "MTolubeev"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/MTolubeev/DOCK.git",
+    "accountId": "6c86480a-7af0-4f97-8eb1-16a6871b81de"
+  }
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -54,13 +69,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.EShopApplication.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/lecto/IdeaProjects/loh",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/user/Рабочий стол/testik/DOCK",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -135,10 +152,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.EShopApplication" />
         <item itemvalue="JUnit.UserServiceTest" />
         <item itemvalue="JUnit.services in E-Shop" />
         <item itemvalue="JUnit.controllers in E-Shop" />
-        <item itemvalue="Application.EShopApplication" />
         <item itemvalue="Application.EShopApplication" />
       </list>
     </recent_temporary>
@@ -538,7 +555,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/myFront" />
+                        <option value="origin/main" />
                       </list>
                     </value>
                   </entry>
